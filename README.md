@@ -91,10 +91,11 @@ docker --help
 ```
 
 Get help on Docker command usage with docker {command} --help
+```
+docker run --help
+```
 
-$ docker run --help
-
-- (-t = --tty, -i = --interactive, -d = --detashed, -e = --env, -p = --publish, -rm = --remove after, -a = --all)
+(-t = --tty, -i = --interactive, -d = --detashed, -e = --env, -p = --publish, -rm = --remove after, -a = --all)
 
 ## Building Images
 
@@ -103,87 +104,105 @@ Docker images are a lightweight, standalone, executable package of software that
 code, runtime, system tools, system libraries and settings.
 
 List local images
+```
+docker images
+```
 
-$ docker images
-
-$ docker image ls
+```
+docker image ls
+```
 
 Build an Image from a Dockerfile
+```
+docker build -t <image_name> .
+```
 
-$ docker build -t <image_name> .
+```
+docker run -it <image_name> /bin/bash
+```
 
-$ docker run -it <image_name> /bin/bash
-
-> python3 print.py
+```
+python3 print.py
+```
 
 Hello World!
-
-> cat print.py
-
+```
+cat print.py
+```
 print('Hello World!')
+```
+exit
+```
 
-> exit
-
-> docker run <image_name>
-
+```
+docker run <image_name>
+```
 Hello World!
 
 Build an image from the Dockerfile in the current directory and tag the image
-
-$ docker build -t myapp:1.0 .
+```
+docker build -t myapp:1.0 .
+```
 
 Build an image with docker build {path}
-
-$ docker build .
+```
+docker build .
+```
 
 Build an Image from a Dockerfile without the cache
-
-$ docker build -t <image_name> . –no-cache
+```
+docker build -t <image_name> . –no-cache
+```
 
 Build a tagged image with docker build --tag {name:tag} {path}
-
-$ docker build --tag myimage:2023-edition .
+```
+docker build --tag myimage:2023-edition .
+```
 
 Build an image without using the cache docker build -no-cache {path}
-
-$ docker build --no-cache .
+```
+docker build --no-cache .
+```
 
 ## Image Management
 
 List all local images with docker images
-
-$ docker images
-
+```
+docker images
+```
 Show Docker disk usage with docker system df
-
-$ docker system df
-
+```
+docker system df
+```
 Show image creation steps from intermediate layers with docker history {image}
-
-$ docker history alpine
-
+```
+docker history alpine
+```
 Save an image to a file with docker save --output {filename}
 Usually combined with a compression tool like gzip
-
-$ docker save julia | gzip > julia.tar.gz
-
+```
+docker save julia | gzip > julia.tar.gz
+```
 Load an image from a file with docker load --input {filename}
-
-$ docker load --input julia.tar.gz
-
+```
+docker load --input julia.tar.gz
+```
 Delete an image with docker rmi {image}
+```
+docker rmi <image_name>
+```
 
-$ docker rmi <image_name>
-
-$ docker rmi rocker/r-base
-
+```
+docker rmi rocker/r-base
+```
 Delete an image from the local image store
-
-$ docker rmi alpine:3.4
-
+```
+docker rmi alpine:3.4
+```
 Remove all unused images
-
-$ docker image prune
+```
+docker image prune
+```
 
 ## Inspecting Containers
 
@@ -192,101 +211,114 @@ A container is a runtime instance of a docker image. A container will always run
 Containers isolate software from its environment and ensure that it works uniformly despite differences for instance between development and staging.
 
 To list currently running containers:
+```
+docker container ls
+```
 
-$ docker container ls
-
-$ docker ps
-
+```
+docker ps
+```
 List all docker containers (running and stopped):
+```
+docker ps --all
+```
 
-$ docker ps --all
-
-$ docker container ls --all
+```
+docker container ls --all
+```
 
 List all containers matching a conditions with docker ls --filter {key}={value}
-
-$ docker container ls --filter 'name=red1'
-
+```
+docker container ls --filter 'name=red1'
+```
 Show container log output with docker logs --follow {container}
+```
+docker run --name bb busybox sh -c "$(echo date)"  --> Print current datetime
+```
 
-$ docker run --name bb busybox sh -c "$(echo date)"  --> Print current datetime
-
-$ dockerlogs --follow bb   --> Print what bb container printed
-
+```
+dockerlogs --follow bb   --> Print what bb container printed
+```
 
 
 ## Running Containers
 
 Create and run a container from an image, with a custom name
-
-$ docker run --name <container_name> <image_name>
-
+```
+docker run --name <container_name> <image_name>
+```
 Run a container with and publish a container’s port(s) to the host.
-
-$ docker run -p <host_port>:<container_port> <image_name>
-
+```
+docker run -p <host_port>:<container_port> <image_name>
+```
 Run a container in the background
-
-$ docker run -d <image_name>
-
+```
+docker run -d <image_name>
+```
 Start or stop an existing container:
-
-$ docker start|stop <container_name> (or <container-id>)
-
+```
+docker start|stop <container_name> (or <container-id>)
+```
 Remove a stopped container:
-
-$ docker rm <container_name>
-
+```
+docker rm <container_name>
+```
 Open a shell inside a running container:
-
-$ docker exec -it <container_name> sh
-
+```
+docker exec -it <container_name> sh
+```
 Fetch and follow the logs of a container:
-
-$ docker logs -f <container_name>
-
+```
+docker logs -f <container_name>
+```
 To inspect a running container:
-
-$ docker inspect <container_name> (or <container_id>)
-
+```
+docker inspect <container_name> (or <container_id>)
+```
 View resource usage stats
-
-$ docker container stats
-
+```
+docker container stats
+```
 
 
 Run a container with docker run {image}
-
-$ docker run hello-world  --> Runs a test container to check your installation works
-
+```
+docker run hello-world  --> Runs a test container to check your installation works
+```
 Run a container then use it to run a command with docker run {image} {command}
-
-$ docker run python python -c "print('Python in Docker')"  --> Run Python & print text
-
-$ docker run rocker/r-base r -e "print(lm(disc`speed, cars))" --> Run R & print a model
-
+  --> Run Python & print text
+```
+docker run python python -c "print('Python in Docker')"
+```
+--> Run R & print a model
+```
+docker run rocker/r-base r -e "print(lm(disc`speed, cars))" 
+```
 Run a container interactively with docker run --interactive --tty
-
-$ docker run --interactive --tty rocker/r-base  --> Run R interactively
-
+--> Run R interactively
+```
+docker run --interactive --tty rocker/r-base  
+```
 Run a container, and remove it once you've finished with docker run --rm
-
-$ docker run --rm mysql --> Run MySQL, then clean up
-
+```
+docker run --rm mysql --> Run MySQL, then clean up
+```
 Run an image in the background with docker run --detach
-
-$ docker run --detach postgres
-
+```
+docker run --detach postgres
+```
 Run an image, assigning a name, with docker --name {name} run
-
-$ docker run --name red1 redis --> Run redis, naming the container as red1
-
+```
+docker run --name red1 redis --> Run redis, naming the container as red1
+```
 Run an image as a user with docker run --user {username}
+```
+docker run --user doctordocker mongo
+```
 
-$ docker run --user doctordocker mongo
-
-$ docker run
-
+```
+docker run
+```
 - --rm remove container automatically after it exits
 - -it connect the container to terminal
 - --name web name the container
@@ -296,93 +328,130 @@ $ docker run
 - /bin/sh the command to run inside the container
 
 Stop a running container through SIGTERM
-
-$ docker stop web
-
+```
+docker stop web
+```
 Stop a running container through SIGKILL
-
-$ docker kill web
-
+```
+docker kill web
+```
 Delete all running and stopped containers 
-
-$ docker rm -f $(docker ps -aq)
-
+```
+docker rm -f $(docker ps -aq)
+```
 Create a new bash process inside the container and connect it to the terminal
-
-$ docker exec -it web bash
-
+```
+docker exec -it web bash
+```
 Print the last 100 lines of a container’s logs
-
-$ docker logs --tail 100 web
+```
+docker logs --tail 100 web
+```
 
 ## Creating a Network
+```
+docker network ls
+```
 
-$ docker network ls
+```
+docker network --help
+```
 
-$ docker network --help
+```
+docker network create my_app_net <network_name>
+```
 
-$ docker network create my_app_net   <network_name>
+```
+docker network inspect my_app_net
+```
 
-$ docker network inspect my_app_net
+```
+docker container run -d --name <container_name> --network <network_name> nginx
+```
 
-$ docker container run -d --name <container_name> --network <network_name> nginx
-
-$ docker container run -d --name new_nginx --network my_app_net nginx
+```
+docker container run -d --name new_nginx --network my_app_net nginx
+```
 
 ## Connect a container to a network started
+(Connect "Id" Network of  "Driver": "bridge", 8facc8c8429a to a Container) 
+```
+docker network connect <network_name> <container_name> 
+```
 
-$ docker network connect <network_name> <container_name> (Connect "Id" Network of  "Driver": "bridge", 8facc8c8429a to a Container) 
+```
+docker network connect my_app_net db
+```
 
-$ docker network connect my_app_net db
+```
+docker network inspect <network_name>
+```
 
-$ docker network inspect <network_name>
+```
+docker container inspect <container_name>
+```
+   (Disconnect a Container to a Network)
+```
+docker network disconnect <network_name> <container_name>
+```
 
-$ docker container inspect <container_name>
+```
+docker network disconnect bridge db
+```
 
-$ docker network disconnect <network_name> <container_name>   (Disconnect a Container to a Network)
+```
+docker network disconnect bridge webhost
+```
 
-$ docker network disconnect bridge db 
+```
+docker network disconnect bridge proxy
+```
 
-$ docker network disconnect bridge webhost
+```
+docker network ls ( active only )
+```
 
-$ docker network disconnect bridge proxy
-
-$ docker network ls ( active only )
-
-$ docker network ls -a  (--all = active+stopped)
+```
+docker network ls -a  (--all = active+stopped)
+```
 
 ## Docker Hub
 
 Docker Hub is a service provided by Docker for finding and sharing container images with your team. Learn more and find images at https://hub.docker.com
 
 Login into Docker
-
-$ docker login -u <username>
-
+```
+docker login -u <username>
+```
 Publish an image to Docker Hub
-
-$ docker push <username>/<image_name>
-
+```
+docker push <username>/<image_name>
+```
 Search Hub for an image
-
-$ docker search <image_name>
-
+```
+docker search <image_name>
+```
 Pull an image from a Docker Hub
-
-$ docker pull <image_name>
-
+```
+docker pull <image_name>
+```
 ### After modify your python script build again
+```
+docker build -t python-imdb .
+```
 
-$ docker build -t python-imdb .
-
-$ docker run -t -i python-imdb
-
+```
+docker run -t -i python-imdb
+```
 
 ### After modifying your python script build again
+```
+docker build -t python-fastapi .
+```
 
-$ docker build -t python-fastapi .
-
-$ docker run -p 8000:8000 python-fastapi
+```
+docker run -p 8000:8000 python-fastapi
+```
 
 Docker Tutorial For Beginners - How To Containerize Python Applications
 https://www.youtube.com/watch?v=bi0cKgmRuiA&t=695s
