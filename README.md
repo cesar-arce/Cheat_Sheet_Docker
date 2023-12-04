@@ -40,7 +40,7 @@ CMD ["c:\\Apache24\\bin\\httpd.exe", "-w"]
 	```
 	docker pull python:3.9
 	```
- 
+ 	or
 	```
   	docker pull python:latest
 	```
