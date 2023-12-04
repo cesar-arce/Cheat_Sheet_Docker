@@ -174,14 +174,17 @@ docker images
 ```
 docker image ls
 ```
+
 Show Docker disk usage with docker system df
 ```
 docker system df
 ```
+
 Show image creation steps from intermediate layers with docker history {image}
 ```
 docker history alpine
 ```
+
 Save an image to a file with docker save --output {filename}
 Usually combined with a compression tool like gzip
 ```
