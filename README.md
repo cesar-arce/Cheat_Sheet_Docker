@@ -139,10 +139,7 @@ docker run <image_name>
 ```
 Hello World!
 
-Build an image from the Dockerfile in the current directory and tag the image
-```
-docker build -t myapp:1.0 .
-```
+### Build Images
 
 Build an image with docker build {path}
 ```
@@ -161,6 +158,11 @@ docker run <image_name>
 Build an Image from a Dockerfile without the cache
 ```
 docker build -t <image_name> . –no-cache
+```
+
+Build an image from the Dockerfile in the current directory and tag the image
+```
+docker build -t myapp:1.0 .
 ```
 
 Build a tagged image with docker build --tag {name:tag} {path}
