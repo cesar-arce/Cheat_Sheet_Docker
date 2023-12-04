@@ -149,6 +149,15 @@ Build an image with docker build {path}
 docker build .
 ```
 
+Build an Image from a Dockerfile
+```
+docker build -t <image_name> .
+```
+To Update modifications run
+```
+docker run <image_name>
+```
+
 Build an Image from a Dockerfile without the cache
 ```
 docker build -t <image_name> . –no-cache
