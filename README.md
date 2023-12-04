@@ -40,15 +40,19 @@ CMD ["c:\\Apache24\\bin\\httpd.exe", "-w"]
       ```
       docker pull python:3.9
       ```
+      
       ```
       docker pull python:latest
       ```
+      
       ```
       docker create --name <container_name> python:3.9
       ```
+      
       ```
       docker start <container_name>
       ```
+      
       ```
       docker run -it --name <container_name> python:3.9 /bin/bash
       ```
@@ -57,9 +61,11 @@ or case MySQL
       ```
       docker run -it --name <container_name> -e MYSQL_ROOT_PASSWORD=root -d mysql/mysql -server:5.7 mysql
       ```
+      
       ```
       docker exec -it <container_name> /bin/bash
       ```
+      
       ```
       docker container stop <container_name>
       ```
@@ -79,7 +85,6 @@ Display Docker system info with docker info
       ```
       docker info
       ```
-
 Get help on Docker with docker --help
       ```
       docker --help
