@@ -45,11 +45,17 @@ docker pull python:3.9
 docker pull python:latest
 ```
 
-- $ docker create --name <container_name> python:3.9
+```
+docker create --name <container_name> python:3.9
+```
 
-- $ docker start <container_name>
+```
+docker start <container_name>
+```
 
-$ docker run -it --name <container_name> python:3.9 /bin/bash
+```
+docker run -it --name <container_name> python:3.9 /bin/bash
+```
 
 or case MySQL
 
