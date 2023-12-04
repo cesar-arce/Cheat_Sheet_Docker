@@ -40,9 +40,10 @@ CMD ["c:\\Apache24\\bin\\httpd.exe", "-w"]
 	```
 	docker pull python:3.9
 	```
+ 
 	```
-  docker pull python:latest
-  ```
+  	docker pull python:latest
+ 	 ```
 
 - $ docker create --name <container_name> python:3.9
 
