@@ -369,6 +369,12 @@ Print the last 100 lines of a container’s logs
 docker logs --tail 100 web
 ```
 
+Stop one or more running containers
+> docker stop [OPTIONS] CONTAINER [CONTAINER...]
+```
+docker stop <container_name>
+```
+
 ## Creating a Network
 ```
 docker network ls
