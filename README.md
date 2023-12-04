@@ -251,6 +251,16 @@ docker run --name bb busybox sh -c "$(echo date)"  --> Print current datetime
 dockerlogs --follow bb   --> Print what bb container printed
 ```
 
+Running docker stats on all running containers against a Linux daemon.
+> docker stats [OPTIONS] [CONTAINER...]
+```
+docker stats
+```
+
+Running docker stats on container with name nginx and getting output in json format.
+```
+docker stats nginx --no-stream --format "{{ json . }}"
+```
 
 ## Running Containers
 
