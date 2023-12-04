@@ -54,12 +54,15 @@ docker run -it --name <container_name> python:3.9 /bin/bash
 ```
 
 or case MySQL
-
-$ docker run -it --name <container_name> -e MYSQL_ROOT_PASSWORD=root -d mysql/mysql -server:5.7 mysql
-
-$ docker exec -it <container_name> /bin/bash
-
-- $ docker container stop <container_name>
+```
+docker run -it --name <container_name> -e MYSQL_ROOT_PASSWORD=root -d mysql/mysql -server:5.7 mysql
+```
+```
+docker exec -it <container_name> /bin/bash
+```
+```
+docker container stop <container_name>
+```
 
 ## Getting Help
 Terminal:
