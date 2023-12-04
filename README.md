@@ -170,6 +170,10 @@ List all local images with docker images
 ```
 docker images
 ```
+
+```
+docker image ls
+```
 Show Docker disk usage with docker system df
 ```
 docker system df
