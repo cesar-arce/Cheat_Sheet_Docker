@@ -185,6 +185,10 @@ Show image creation steps from intermediate layers with docker history {image}
 docker history alpine
 ```
 
+```
+docker history python
+```
+
 Save an image to a file with docker save --output {filename}
 Usually combined with a compression tool like gzip
 ```
