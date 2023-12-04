@@ -37,9 +37,12 @@ CMD ["c:\\Apache24\\bin\\httpd.exe", "-w"]
 --------------------------------------------------------
 # RUN = pull + create + start
 
-- $ docker pull python:3.9
-
-- $ docker pull python --> last version
+	```
+	docker pull python:3.9
+	```
+	```
+  docker pull python:latest
+  ```
 
 - $ docker create --name <container_name> python:3.9
 
