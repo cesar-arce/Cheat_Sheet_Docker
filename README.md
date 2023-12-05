@@ -174,6 +174,20 @@ Build an image without using the cache docker build -no-cache {path}
 ```
 docker build --no-cache .
 ```
+#### Forcefully Remove Containers and Images
+The docker prune command removes the stopped containers and dangling images. But what if we wish to remove all the Docker images from our machine. For this, we first need to remove all the Docker containers running on our machine and then remove the Docker images:
+```
+docker rm -f $(docker ps -qa)
+```
+This command will remove all the containers. The -f flag is used to remove the running Docker containers forcefully.
+
+Now let’s remove all the Docker images using the docker rmi command:
+```
+docker rmi -f $(docker images -aq)
+```
+The docker images -qa will return the image id of all the Docker images. The docker rmi command will then remove all the images one by one. Again, the -f flag is used to forcefully remove the Docker image.
+
+
 
 ## Image Management
 
