@@ -183,9 +183,19 @@ docker image rm <image_name>
 ```
 docker image rm postgres:13-beta2-alpine
 ```
+#### Pruning Containers and Images
+docker image prune bulk-removes unused images. It goes hand-in-hand with docker container prune, which bulk-removes stopped containers. Let’s start with the last command:
+```
+docker container prune
+```
 
+```
+docker image prune
+```
 
-
+```
+docker image prune -a
+```
 #### Forcefully Remove Containers and Images
 The docker prune command removes the stopped containers and dangling images. But what if we wish to remove all the Docker images from our machine. For this, we first need to remove all the Docker containers running on our machine and then remove the Docker images:
 ```
