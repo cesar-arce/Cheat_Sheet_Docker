@@ -174,6 +174,18 @@ Build an image without using the cache docker build -no-cache {path}
 ```
 docker build --no-cache .
 ```
+#### Removing a Single Image
+
+```
+docker image rm <image_name>
+```
+
+```
+docker image rm postgres:13-beta2-alpine
+```
+
+
+
 #### Forcefully Remove Containers and Images
 The docker prune command removes the stopped containers and dangling images. But what if we wish to remove all the Docker images from our machine. For this, we first need to remove all the Docker containers running on our machine and then remove the Docker images:
 ```
