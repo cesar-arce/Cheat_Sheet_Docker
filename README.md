@@ -35,6 +35,8 @@ CMD ["python3", "./main.py"]
 CMD ["c:\\Apache24\\bin\\httpd.exe", "-w"]
 </pre>
 --------------------------------------------------------
+https://docs.docker.com/engine/reference/commandline/cli/
+
 # RUN = pull + create + start
 
 ```
