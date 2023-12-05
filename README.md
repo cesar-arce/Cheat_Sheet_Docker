@@ -76,7 +76,7 @@ Display Docker version with docker --version
 ```
 docker --version
 ```
-(-v = --version)
+(--version = -v)
 ```
 docker -v
 ```
