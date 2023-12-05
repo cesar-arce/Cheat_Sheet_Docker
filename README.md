@@ -95,7 +95,7 @@ Get help on Docker command usage with docker {command} --help
 docker run --help
 ```
 
-(-t = --tty, -i = --interactive, -d = --detashed, -e = --env, -p = --publish, -rm = --remove after, -a = --all)
+(-t = --tty, -i = --interactive, -d = --detash, -e = --env, -p = --publish, -rm = --remove after, -p = --port, -a = --all)
 
 ## Building Images
 
