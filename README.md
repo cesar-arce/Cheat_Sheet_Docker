@@ -183,6 +183,22 @@ docker image rm <image_name>
 ```
 docker image rm postgres:13-beta2-alpine
 ```
+
+Remove one or more images
+
+> docker image rm <options> IMAGE <image_name>
+Description
+See docker rmi for more information.
+
+##### Options
+Option	Short	Default	Description
+--force	-f		Force removal of the image
+--no-prune			Do not delete untagged parents
+
+```
+docker image rm <image_name> -f
+```
+
 #### Pruning Containers and Images
 docker image prune bulk-removes unused images. It goes hand-in-hand with docker container prune, which bulk-removes stopped containers. Let’s start with the last command:
 ```
