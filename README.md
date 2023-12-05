@@ -265,7 +265,7 @@ dockerlogs --follow bb   --> Print what bb container printed
 Running docker stats on all running containers against a Linux daemon.
 > docker stats [OPTIONS] [CONTAINER...]
 ```
-docker stats
+docker stats <options> <container_name>
 ```
 
 Running docker stats on container with name nginx and getting output in json format.
