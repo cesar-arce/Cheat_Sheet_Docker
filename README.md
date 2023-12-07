@@ -1,5 +1,4 @@
-<p align="justify">
-# Working with Dockers (Dockerfile, Images, Containers, and Networks)
+# <p align="justify"> Working with Dockers (Dockerfile, Images, Containers, and Networks)
 </p>
 
 <p align="justify">
