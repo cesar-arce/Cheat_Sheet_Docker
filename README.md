@@ -58,6 +58,8 @@ docker run --help
 
 (-t = --tty, -i = --interactive, -d = --detash, -e = --env, -p = --publish, -rm = --remove after, -p = --port, -a = --all)
 
+https://docs.docker.com/engine/reference/commandline/cli/
+
 [Go Up](#GoUp)
 
 ## Dockerfile <a name="Dockerfile"></a>
@@ -92,7 +94,7 @@ CMD ["python3", "./main.py"]
 CMD ["c:\\Apache24\\bin\\httpd.exe", "-w"]
 </pre>
 --------------------------------------------------------
-https://docs.docker.com/engine/reference/commandline/cli/
+
 
 [Go Up](#GoUp)
 
