@@ -5,6 +5,9 @@ The isolation and security allows you to run many containers simultaneously on a
 Containers are lightweight and contain everything needed to run the application, so you do not need to rely on what is currently installed on the host. 
 You can easily share containers while you work, and be sure that everyone you share with gets the same container that works in the same way.
 
+
+## Dockerfile
+
 ***********************************************************
 DOCKERS --> Dokerfile (in the root) same place as requirements.txt
 
