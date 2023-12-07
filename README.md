@@ -189,6 +189,11 @@ Include Metadata
 docker image inspect <image_name>
 ```
 
+Building Images from Dockerfile
+```
+docker build -f <Dockerfile>
+```
+
 [Go Up](#GoUp)
 
 ### Build Images <a name="Build_Images1"></a>
