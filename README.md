@@ -6,8 +6,8 @@ Containers are lightweight and contain everything needed to run the application,
 You can easily share containers while you work, and be sure that everyone you share with gets the same container that works in the same way.
 
 ## Table of contents <a name="GoUp"></a>
-1. [Dockerfile](#Dockerfile)
-2. [Getting Help](#Getting_Help)
+1. [Getting Help](#Getting_Help)
+2. [Dockerfile](#Dockerfile)
 3. [Building Images](#Building_Images)
     1. [Build Images](#Build_Images1)
 	  2. [Removing a Single Image](#Removing_Single_Image1)
@@ -27,6 +27,38 @@ You can easily share containers while you work, and be sure that everyone you sh
 ![Life Cicle](./life-cycle-containerized-apps-docker-cli.png)
 
 Source: https://learn.microsoft.com/en-us/dotnet/architecture/microservices/docker-application-development-process/docker-app-development-workflow
+
+
+[Go Up](#GoUp)
+
+## Getting Help <a name="Getting_Help"></a>
+
+Display Docker version with docker --version
+```
+docker --version
+```
+(--version = -v)
+```
+docker -v
+```
+
+Display Docker system info with docker info
+```
+docker info
+```
+Get help on Docker with docker --help
+```
+docker --help
+```
+
+Get help on Docker command usage with docker {command} --help
+```
+docker run --help
+```
+
+(-t = --tty, -i = --interactive, -d = --detash, -e = --env, -p = --publish, -rm = --remove after, -p = --port, -a = --all)
+
+[Go Up](#GoUp)
 
 ## Dockerfile <a name="Dockerfile"></a>
 
@@ -98,35 +130,6 @@ docker exec -it <container_name> /bin/bash
 ```
 docker container stop <container_name>
 ```
-[Go Up](#GoUp)
-
-## Getting Help <a name="Getting_Help"></a>
-
-Display Docker version with docker --version
-```
-docker --version
-```
-(--version = -v)
-```
-docker -v
-```
-
-Display Docker system info with docker info
-```
-docker info
-```
-Get help on Docker with docker --help
-```
-docker --help
-```
-
-Get help on Docker command usage with docker {command} --help
-```
-docker run --help
-```
-
-(-t = --tty, -i = --interactive, -d = --detash, -e = --env, -p = --publish, -rm = --remove after, -p = --port, -a = --all)
-
 [Go Up](#GoUp)
 
 ## Building Images <a name="Building_Images"></a>
