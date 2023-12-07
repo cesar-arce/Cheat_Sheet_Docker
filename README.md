@@ -297,9 +297,15 @@ The docker prune command removes the stopped containers and dangling images. But
 ```
 docker rm -f $(docker ps -qa)
 ```
-This command will remove all the containers. The -f flag is used to remove the running Docker containers forcefully.
 
+<p align="justify">
+This command will remove all the containers. The -f flag is used to remove the running Docker containers forcefully.
+</p>
+
+<p align="justify">
 Now let’s remove all the Docker images using the docker rmi command:
+</p>
+
 ```
 docker rmi -f $(docker images -aq)
 ```
