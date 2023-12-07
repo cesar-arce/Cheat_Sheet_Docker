@@ -180,6 +180,10 @@ docker run <image_name>
 ```
 Hello World!
 
+```
+docker image inspect <image_name>
+```
+
 [Go Up](#GoUp)
 
 ### Build Images <a name="Build_Images1"></a>
