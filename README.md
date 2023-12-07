@@ -1,9 +1,11 @@
 # Working with Dockers (Dockerfile, Images, Containers, and Networks)
 
+<p align="justify">
 Docker provides the ability to package and run an application in a loosely isolated environment called a container.
 The isolation and security allows you to run many containers simultaneously on a given host. 
 Containers are lightweight and contain everything needed to run the application, so you do not need to rely on what is currently installed on the host. 
 You can easily share containers while you work, and be sure that everyone you share with gets the same container that works in the same way.
+</p>
 
 ## Table of contents <a name="GoUp"></a>
 1. [Getting Help](#Getting_Help)
@@ -135,10 +137,11 @@ docker container stop <container_name>
 [Go Up](#GoUp)
 
 ## Building Images <a name="Building_Images"></a>
-
+<p align="justify">
 Docker images are a lightweight, standalone, executable package of software that includes everything needed to run an application:
 
 code, runtime, system tools, system libraries and settings.
+</p>
 
 List local images
 ```
@@ -231,9 +234,12 @@ Remove one or more images
 Description --> See docker rmi for more information.
 
 > docker rmi
+<p align="justify">
 Removes (and un-tags) one or more images from the host node. If an image has multiple tags, using this command with the tag as a parameter only removes the tag. If the tag is the only one for the image, both the image and the tag are removed.
 
 This does not remove images from a registry. You cannot remove an image of a running container unless you use the -f option. To see all images on a host use the docker image ls command.
+</p>
+
 ```
 docker rmi <options> IMAGE <image_name>
 ```
@@ -254,7 +260,10 @@ docker image rm <image_name> -f
 [Go Up](#GoUp)
 
 #### Pruning Containers and Images <a name="Pruning_Containers_Images1"></a>
+<p align="justify">
 docker image prune bulk-removes unused images. It goes hand-in-hand with docker container prune, which bulk-removes stopped containers. Let’s start with the last command:
+</p>
+ 
 ```
 docker container prune
 ```
@@ -269,7 +278,10 @@ docker image prune -a
 [Go Up](#GoUp)
 
 #### Forcefully Remove Containers and Images <a name="Forcefully_Remove_Containers_Images1"></a>
+<p align="justify">
 The docker prune command removes the stopped containers and dangling images. But what if we wish to remove all the Docker images from our machine. For this, we first need to remove all the Docker containers running on our machine and then remove the Docker images:
+</p>
+
 ```
 docker rm -f $(docker ps -qa)
 ```
@@ -279,7 +291,9 @@ Now let’s remove all the Docker images using the docker rmi command:
 ```
 docker rmi -f $(docker images -aq)
 ```
+<p align="justify">
 The docker images -qa will return the image id of all the Docker images. The docker rmi command will then remove all the images one by one. Again, the -f flag is used to forcefully remove the Docker image.
+</p>
 
 [Go Up](#GoUp)
 
@@ -337,10 +351,11 @@ docker image prune
 [Go Up](#GoUp)
 
 ## Inspecting Containers <a name="Inspecting_Containers"></a>
-
+<p align="justify">
 A container is a runtime instance of a docker image. A container will always run the same, regardless of the infrastructure.
 
 Containers isolate software from its environment and ensure that it works uniformly despite differences for instance between development and staging.
+</p>
 
 To list currently running containers:
 ```
@@ -570,8 +585,9 @@ docker network ls -a  (--all = active+stopped)
 [Go Up](#GoUp)
 
 ## Docker Hub <a name="Docker_Hub"></a>
-
+<p align="justify">
 Docker Hub is a service provided by Docker for finding and sharing container images with your team. Learn more and find images at https://hub.docker.com
+</p>p>
 
 Login into Docker
 ```
