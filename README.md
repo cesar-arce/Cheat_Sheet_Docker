@@ -219,7 +219,7 @@ docker build --no-cache .
 ```
 [Go Up](#GoUp)
 
-#### Removing a Single Image <a name="BRemoving_Single_Image1"></a>
+#### Removing a Single Image <a name="Removing_Single_Image1"></a>
 
 ```
 docker image rm <image_name>
