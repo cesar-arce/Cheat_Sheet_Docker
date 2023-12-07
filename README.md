@@ -18,7 +18,7 @@ You can easily share containers while you work, and be sure that everyone you sh
 5. [Inspecting Containers](#Inspecting_Containers)
 6. [Running Containers](#Running_Containers)
 7. [Creating a Network](#Creating_Network)
-8. [Connect_container_to_network](#Connect_container_to_network)
+8. [Connect container to network](#Connect_container_to_network)
 9. [Docker Hub](#Docker_Hub)
 	  1. [After modify your python script](#After_modify_python_script)
 10. [Download Docker Cheat Sheets](#Download_Docker_Cheat_Sheets)
@@ -56,6 +56,7 @@ CMD ["c:\\Apache24\\bin\\httpd.exe", "-w"]
 </pre>
 --------------------------------------------------------
 https://docs.docker.com/engine/reference/commandline/cli/
+
 [Go Up](#GoUp)
 
 # RUN = pull + create + start
