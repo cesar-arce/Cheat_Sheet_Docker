@@ -181,6 +181,11 @@ docker run <image_name>
 Hello World!
 
 ```
+docker history <image_name>
+```
+
+Include Metadata
+```
 docker image inspect <image_name>
 ```
 
