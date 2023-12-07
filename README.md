@@ -5,8 +5,25 @@ The isolation and security allows you to run many containers simultaneously on a
 Containers are lightweight and contain everything needed to run the application, so you do not need to rely on what is currently installed on the host. 
 You can easily share containers while you work, and be sure that everyone you share with gets the same container that works in the same way.
 
+# Table of contents <a name="GoUp"></a>
+1. [Dockerfile](#Dockerfile)
+2. [Getting Help](#Getting_Help)
+3. [Building Images](#Building_Images)
+    1. [Build Images](#Build_Images1)
+	  2. [Removing a Single Image](#Removing_Single_Image1)
+	  3. [Options](#Options1)
+	  4. [Pruning Containers and Images](#Pruning_Containers_Images1)
+	  5. [Forcefully Remove Containers and Images ](#Forcefully_Remove_Containers_Images1)			
+4. [Image Management](#Image_Management)
+5. [Inspecting Containers](#Inspecting_Containers)
+6. [Running Containers](#Running_Containers)
+7. [Creating a Network](#Creating_Network)
+8. [Connect_container_to_network](#Connect_container_to_network)
+9. [Docker Hub](#Docker_Hub)
+	  1. [After modify your python script](#After_modify_python_script)
+10. [Download Docker Cheat Sheets(#Download_Docker_Cheat_Sheets)
 
-## Dockerfile
+## Dockerfile <a name="Dockerfile"></a>
 
 ***********************************************************
 DOCKERS --> Dokerfile (in the root) same place as requirements.txt
@@ -39,6 +56,7 @@ CMD ["c:\\Apache24\\bin\\httpd.exe", "-w"]
 </pre>
 --------------------------------------------------------
 https://docs.docker.com/engine/reference/commandline/cli/
+[Go Up](#GoUp)
 
 # RUN = pull + create + start
 
@@ -74,8 +92,9 @@ docker exec -it <container_name> /bin/bash
 ```
 docker container stop <container_name>
 ```
+[Go Up](#GoUp)
 
-## Getting Help
+## Getting Help <a name="Getting_Help"></a>
 
 Display Docker version with docker --version
 ```
@@ -102,7 +121,9 @@ docker run --help
 
 (-t = --tty, -i = --interactive, -d = --detash, -e = --env, -p = --publish, -rm = --remove after, -p = --port, -a = --all)
 
-## Building Images
+[Go Up](#GoUp)
+
+## Building Images <a name="Building_Images"></a>
 
 Docker images are a lightweight, standalone, executable package of software that includes everything needed to run an application:
 
@@ -144,7 +165,9 @@ docker run <image_name>
 ```
 Hello World!
 
-### Build Images
+[Go Up](#GoUp)
+
+### Build Images <a name="Build_Images1"></a>
 
 Build an image with docker build {path}
 ```
@@ -179,7 +202,9 @@ Build an image without using the cache docker build -no-cache {path}
 ```
 docker build --no-cache .
 ```
-#### Removing a Single Image
+[Go Up](#GoUp)
+
+#### Removing a Single Image <a name="BRemoving_Single_Image1"></a>
 
 ```
 docker image rm <image_name>
@@ -202,7 +227,9 @@ This does not remove images from a registry. You cannot remove an image of a run
 docker rmi <options> IMAGE <image_name>
 ```
 
-##### Options
+[Go Up](#GoUp)
+
+##### Options <a name="Options1"></a>
 Option	Short	Default	Description
 
 --force	-f		Force removal of the image
@@ -213,7 +240,9 @@ Option	Short	Default	Description
 docker image rm <image_name> -f
 ```
 
-#### Pruning Containers and Images
+[Go Up](#GoUp)
+
+#### Pruning Containers and Images <a name="Pruning_Containers_Images1"></a>
 docker image prune bulk-removes unused images. It goes hand-in-hand with docker container prune, which bulk-removes stopped containers. Let’s start with the last command:
 ```
 docker container prune
@@ -226,7 +255,9 @@ docker image prune
 ```
 docker image prune -a
 ```
-#### Forcefully Remove Containers and Images
+[Go Up](#GoUp)
+
+#### Forcefully Remove Containers and Images <a name="Forcefully_Remove_Containers_Images1"></a>
 The docker prune command removes the stopped containers and dangling images. But what if we wish to remove all the Docker images from our machine. For this, we first need to remove all the Docker containers running on our machine and then remove the Docker images:
 ```
 docker rm -f $(docker ps -qa)
@@ -239,9 +270,9 @@ docker rmi -f $(docker images -aq)
 ```
 The docker images -qa will return the image id of all the Docker images. The docker rmi command will then remove all the images one by one. Again, the -f flag is used to forcefully remove the Docker image.
 
+[Go Up](#GoUp)
 
-
-## Image Management
+## Image Management <a name="Image_Management"></a>
 
 List all local images with docker images
 ```
@@ -292,7 +323,9 @@ Remove all unused images
 docker image prune
 ```
 
-## Inspecting Containers
+[Go Up](#GoUp)
+
+## Inspecting Containers <a name="Inspecting_Containers"></a>
 
 A container is a runtime instance of a docker image. A container will always run the same, regardless of the infrastructure.
 
@@ -339,7 +372,9 @@ Running docker stats on container with name nginx and getting output in json for
 docker stats nginx --no-stream --format "{{ json . }}"
 ```
 
-## Running Containers
+[Go Up](#GoUp)
+
+## Running Containers <a name="Running_Containers"></a>
 
 Create and run a container from an image, with a custom name
 ```
@@ -451,8 +486,9 @@ Stop one or more running containers
 ```
 docker stop <container_name>
 ```
+[Go Up](#GoUp)
 
-## Creating a Network
+## Creating a Network <a name="Creating_Network"></a>
 ```
 docker network ls
 ```
@@ -477,7 +513,9 @@ docker container run -d --name <container_name> --network <network_name> nginx
 docker container run -d --name new_nginx --network my_app_net nginx
 ```
 
-## Connect a container to a network started
+[Go Up](#GoUp)
+
+## Connect a container to a network started <a name="Connect_container_to_network"></a>
 (Connect "Id" Network of  "Driver": "bridge", 8facc8c8429a to a Container) 
 ```
 docker network connect <network_name> <container_name> 
@@ -518,8 +556,9 @@ docker network ls ( active only )
 ```
 docker network ls -a  (--all = active+stopped)
 ```
+[Go Up](#GoUp)
 
-## Docker Hub
+## Docker Hub <a name="Docker_Hub"></a>
 
 Docker Hub is a service provided by Docker for finding and sharing container images with your team. Learn more and find images at https://hub.docker.com
 
@@ -547,8 +586,9 @@ docker build -t python-imdb .
 ```
 docker run -t -i python-imdb
 ```
+[Go Up](#GoUp)
 
-### After modifying your python script build again
+### After modifying your python script build again <a name="After_modify_python_script"></a>
 ```
 docker build -t python-fastapi .
 ```
@@ -560,13 +600,14 @@ docker run -p 8000:8000 python-fastapi
 Docker Tutorial For Beginners - How To Containerize Python Applications
 https://www.youtube.com/watch?v=bi0cKgmRuiA&t=695s
 
+[Go Up](#GoUp)
 
 ![Docker CheatSheet](./Docker_cheat_sheet.png)
 
-### Download Docker Cheat Sheets
+### Download Docker Cheat Sheets <a name="Download_Docker_Cheat_Sheets"></a>
 
 ![Docker Cheat Sheet - 6 pages](./docker_cheat_sheet.pdf)
 
 ![Docker Swarm - 2 pages](./docker-swarm.pdf)
 
-
+[Go Up](#GoUp)
