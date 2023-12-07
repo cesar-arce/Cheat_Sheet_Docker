@@ -409,6 +409,7 @@ docker stats nginx --no-stream --format "{{ json . }}"
 <p align="justify">
 Create and run a container from an image, with a custom name
 </p>
+
 ```
 docker run --name <container_name> <image_name>
 ```
