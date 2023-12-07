@@ -356,7 +356,9 @@ docker image prune
 ## Inspecting Containers <a name="Inspecting_Containers"></a>
 <p align="justify">
 A container is a runtime instance of a docker image. A container will always run the same, regardless of the infrastructure.
+</p>
 
+<p align="justify">
 Containers isolate software from its environment and ensure that it works uniformly despite differences for instance between development and staging.
 </p>
 
@@ -404,8 +406,9 @@ docker stats nginx --no-stream --format "{{ json . }}"
 [Go Up](#GoUp)
 
 ## Running Containers <a name="Running_Containers"></a>
-
+<p align="justify">
 Create and run a container from an image, with a custom name
+</p>
 ```
 docker run --name <container_name> <image_name>
 ```
