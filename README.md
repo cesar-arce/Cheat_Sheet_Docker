@@ -65,7 +65,7 @@ https://docs.docker.com/engine/reference/commandline/cli/
 
 [Go Up](#GoUp)
 
-## Dockerfile <a name="Dockerfile"></a>
+## Dockerfile and Compose file <a name="Dockerfile"></a>
 
 <p align="justify">
 Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. This page describes the commands you can use in a Dockerfile.
