@@ -67,6 +67,10 @@ https://docs.docker.com/engine/reference/commandline/cli/
 
 ## Dockerfile <a name="Dockerfile"></a>
 
+<p align="justify">
+Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. This page describes the commands you can use in a Dockerfile.
+</p>
+
 ***********************************************************
 DOCKERS --> Dokerfile (in the root) same place as requirements.txt
 
