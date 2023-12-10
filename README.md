@@ -71,6 +71,10 @@ https://docs.docker.com/engine/reference/commandline/cli/
 Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. This page describes the commands you can use in a Dockerfile.
 </p>
 
+<p align="justify">
+The Compose Specification lets you define a platform-agnostic container based application. Such an application is designed as a set of containers which have to both run together with adequate shared resources and communication channels.
+</p>
+
 ***********************************************************
 DOCKERS --> Dokerfile (in the root) same place as requirements.txt
 
