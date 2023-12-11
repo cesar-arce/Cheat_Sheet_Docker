@@ -31,7 +31,7 @@ You can easily share containers while you work, and be sure that everyone you sh
 
 Source: https://learn.microsoft.com/en-us/dotnet/architecture/microservices/docker-application-development-process/docker-app-development-workflow
 
-[!Developing inside a Container VS Code](https://code.visualstudio.com/docs/devcontainers/containers)
+[Developing inside a Container VS Code](https://code.visualstudio.com/docs/devcontainers/containers)
 
 [Go Up](#GoUp)
 
