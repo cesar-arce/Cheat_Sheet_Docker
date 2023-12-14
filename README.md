@@ -24,7 +24,8 @@ You can easily share containers while you work, and be sure that everyone you sh
 8. [Connect container to network](#Connect_container_to_network)
 9. [Docker Hub](#Docker_Hub)
     1. [After modify your python script](#After_modify_python_script)
-10. [Download Docker Cheat Sheets](#Download_Docker_Cheat_Sheets)
+10. [Docker Compose](#Docker_Compose)
+11. [Download Docker Cheat Sheets](#Download_Docker_Cheat_Sheets)
 
 
 ![Life Cicle](./life-cycle-containerized-apps-docker-cli.png)
@@ -662,6 +663,34 @@ docker run -p 8000:8000 python-fastapi
 
 Docker Tutorial For Beginners - How To Containerize Python Applications
 https://www.youtube.com/watch?v=bi0cKgmRuiA&t=695s
+
+[Go Up](#GoUp)
+
+## Docker Compose <a name="Docker_Compose"></a>
+```
+docker-compose ps
+```
+
+```
+docker-compose build
+```
+
+```
+docker-compose up
+```
+
+```
+docker-compose stop
+```
+
+```
+docker-compose start
+```
+
+```
+docker-compose down
+```
+
 
 [Go Up](#GoUp)
 
