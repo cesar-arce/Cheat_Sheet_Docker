@@ -1,4 +1,4 @@
-![Docker+Kubernetes](./life-cycle-containerized-apps-docker-cli.png)
+![Docker+Kubernetes](./docker+kubernetes.jpg)
 
 # <p align="justify"> Working with Dockers (Dockerfile, Images, Containers, and Networks)
 </p>
