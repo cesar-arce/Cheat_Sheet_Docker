@@ -1,4 +1,4 @@
-![Dockers+K](./docker+kubernetes.jpg = 250x250)
+![Dockers+K](./docker+kubernetes.jpg)
 
 # <p align="justify"> Working with Dockers (Dockerfile, Images, Containers, and Networks)
 </p>
