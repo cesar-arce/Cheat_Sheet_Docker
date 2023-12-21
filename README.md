@@ -1,4 +1,4 @@
-![Dockers+K](./docker+kubernetes.jpg | width=350x250)
+![Dockers+K](./docker+kubernetes.jpg "Title" {width=40px height=400px})
 
 # <p align="justify"> Working with Dockers (Dockerfile, Images, Containers, and Networks)
 </p>
